@@ -1,0 +1,2 @@
+class DomnibusMethodError(Exception):
+    pass
