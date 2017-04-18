@@ -18,8 +18,10 @@ class DomnibusOperationMixin(object):
     def _get_value_for_dns(self):
         import dns.resolver
         from dns.resolver import NoAnswer
-        values = {}
-        for tp in ["MX", "A", "AAAA", "TXT", "NS", "SOA"]:
+        from collections import OrderedDict
+
+        values = OrderedDict()
+        for tp in ["A", "AAAA", "MX", "NS", "SOA", "TXT"]:
             try:
                 values[tp] = [entry.to_text()
                               for entry in list(dns.resolver.query(self.domain, tp))]
