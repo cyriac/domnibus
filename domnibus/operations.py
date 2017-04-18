@@ -13,7 +13,7 @@ class DomnibusOperationMixin(object):
         return (s.getpeercert(), True)
 
     def _get_value_for_ns(self):
-        return (self.dns['NS'], False)
+        return ([ns.rstrip('.') for ns in self.dns['NS']], False)
 
     def _get_value_for_dns(self):
         import dns.resolver

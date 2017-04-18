@@ -23,7 +23,7 @@ setup(
     include_package_data=True,
     license='MIT',
     description='Get all possible information about a domain',
-    keywords = ['agua', 'testing', 'data', 'csv'],
+    keywords = ['domnibus', 'domni', 'whois', 'ssl', 'nameserver', 'dns'],
     url='https://github.com/cyriac/domnibus',
     download_url = 'https://github.com/cyriac/domnibus/archive/v{version}.tar.gz'.format(version=version),
     entry_points='''
