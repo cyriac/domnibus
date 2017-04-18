@@ -12,4 +12,16 @@ class DomnibusOperationMixin(object):
         return (s.getpeercert(), True)
 
     def _get_value_for_name_servers(self):
-        return (self.whois['name_servers'], False)
+        return (self.dns['NS'], False)
+
+    def _get_value_for_dns(self):
+        import dns.resolver
+        from dns.resolver import NoAnswer
+        values = {}
+        for tp in ["MX", "A", "AAAA", "TXT", "NS", "SOA"]:
+            try:
+                values[tp] = [entry.to_text()
+                              for entry in list(dns.resolver.query(self.domain, tp))]
+            except NoAnswer:
+                values[tp] = []
+        return (values, True)
