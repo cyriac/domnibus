@@ -1,5 +1,6 @@
 from .exceptions import *
 from .operations import *
+import collections
 
 class Domnibus(DomnibusOperationMixin):
     FUNC_PREFIX = '_get_value_for_'
@@ -23,7 +24,7 @@ class Domnibus(DomnibusOperationMixin):
         allowed_methods = set()
 
         for func in dir(cls):
-            if func.startswith(cls.FUNC_PREFIX) and callable(getattr(cls, func)):
+            if func.startswith(cls.FUNC_PREFIX) and isinstance(getattr(cls, func), collections.Callable):
                 func_name = func.lstrip(cls.FUNC_PREFIX)
                 allowed_methods.add(func_name)
 
