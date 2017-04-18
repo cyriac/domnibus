@@ -1,4 +1,5 @@
 class DomnibusOperationMixin(object):
+
     def _get_value_for_whois(self):
         import whois
         return (whois.whois(self.domain), True)
