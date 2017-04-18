@@ -1,3 +1,4 @@
 dnspython==1.15.0
+ipython==5.3.0; python_version < '3.3'
 fire==0.1.0
 python-whois==0.6.5

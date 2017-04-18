@@ -12,7 +12,7 @@ class DomnibusOperationMixin(object):
         s.connect((self.domain, 443))
         return (s.getpeercert(), True)
 
-    def _get_value_for_name_servers(self):
+    def _get_value_for_ns(self):
         return (self.dns['NS'], False)
 
     def _get_value_for_dns(self):
