@@ -1,15 +1,23 @@
 import fire
+import copy
 from domnibus import Domnibus
 
-def trigger_method(method, domain=None):
-    if method in ['list', 'ls']:
-        value = ["{} <domain>".format(r) for r in Domnibus.allowed_methods()]
-    else:
-        value = Domnibus(domain)[method]
-    return value
+class DomnibusMeta(type):
+    def __init__(cls, name, bases, attrs, **kwargs):
+        allowed_methods = Domnibus.allowed_methods()
+        cls.list = cls.ls = ['{} <domain>'.format(am) for am in allowed_methods]
+
+        for method in allowed_methods:
+            setattr(cls, method, (lambda method: lambda self, domain: Domnibus(domain)[method])(method))
+
+        return super(DomnibusMeta, cls).__init__(name, bases, attrs)
+
+
+class DomnibusCLI(object):
+    __metaclass__ = DomnibusMeta
 
 def cli():
-    fire.Fire(trigger_method)
+    fire.Fire(DomnibusCLI)
 
 if __name__ == '__main__':
     cli()
