@@ -14,9 +14,11 @@ except ImportError:
 install_reqs = parse_requirements('requirements.txt', session=PipSession())
 reqs = [str(ir.req) for ir in install_reqs]
 sys.path.insert(0, os.path.dirname(__file__))
-version = '0.0'
+version = '1.0'
 setup(
     name='domnibus',
+    author='cyriac',
+    author_email='me@cyriacthomas.com',
     version=version,
     packages=find_packages(),
     install_requires=reqs,
