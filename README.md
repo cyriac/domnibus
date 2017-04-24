@@ -40,7 +40,7 @@ dns <domain>
 ```
 
 ##### SSL
-```domni ls google.com```
+```domni ssl google.com```
 
 ```
 crlDistributionPoints: ["http://pki.google.com/GIAG2.crl"]
