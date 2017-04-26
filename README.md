@@ -43,16 +43,16 @@ dns <domain>
 ```domni ssl google.com```
 
 ```
-crlDistributionPoints: ["http://pki.google.com/GIAG2.crl"]
-subjectAltName:        [["DNS", "*.google.com"], ["DNS", "*.android.com"], ["DNS", "*.appengine.google.com"], ["DNS", "*.cloud.google.com"], ["DNS", "*.gcp.gvt2.com"], ["DNS", "*.google-analytics.com"], ["DNS", "*.google.ca"], ["DNS", "*.google.cl"], ["DNS", "*.google.co.in"], ["DNS", "*.google.co.jp"], ["DNS", "*.google.co.uk"], ["DNS", "*.google.com.ar"], ["DNS", "*.google.com.au"], ["DNS", "*.google.com.br"], ["DNS", "*.google.com.co"], ["DNS", "*.google.com.mx"], ["DNS", "*.google.com.tr"], ["DNS", "*.google.com.vn"], ["DNS", "*.google.de"], ["DNS", "*.google.es"], ["DNS", "*.google.fr"], ["DNS", "*.google.hu"], ["DNS", "*.google.it"], ["DNS", "*.google.nl"], ["DNS", "*.google.pl"], ["DNS", "*.google.pt"], ["DNS", "*.googleadapis.com"], ["DNS", "*.googleapis.cn"], ["DNS", "*.googlecommerce.com"], ["DNS", "*.googlevideo.com"], ["DNS", "*.gstatic.cn"], ["DNS", "*.gstatic.com"], ["DNS", "*.gvt1.com"], ["DNS", "*.gvt2.com"], ["DNS", "*.metric.gstatic.com"], ["DNS", "*.urchin.com"], ["DNS", "*.url.google.com"], ["DNS", "*.youtube-nocookie.com"], ["DNS", "*.youtube.com"], ["DNS", "*.youtubeeducation.com"], ["DNS", "*.ytimg.com"], ["DNS", "android.clients.google.com"], ["DNS", "android.com"], ["DNS", "developer.android.google.cn"], ["DNS", "developers.android.google.cn"], ["DNS", "g.co"], ["DNS", "goo.gl"], ["DNS", "google-analytics.com"], ["DNS", "google.com"], ["DNS", "googlecommerce.com"], ["DNS", "source.android.google.cn"], ["DNS", "urchin.com"], ["DNS", "www.goo.gl"], ["DNS", "youtu.be"], ["DNS", "youtube.com"], ["DNS", "youtubeeducation.com"]]
-notBefore:             Apr 12 14:19:56 2017 GMT
-caIssuers:             ["http://pki.google.com/GIAG2.crt"]
-OCSP:                  ["http://clients1.google.com/ocsp"]
-serialNumber:          2607DA66E75C81CE
-notAfter:              Jul  5 13:29:00 2017 GMT
-version:               3
-subject:               [[["countryName", "US"]], [["stateOrProvinceName", "California"]], [["localityName", "Mountain View"]], [["organizationName", "Google Inc"]], [["commonName", "*.google.com"]]]
-issuer:                [[["countryName", "US"]], [["organizationName", "Google Inc"]], [["commonName", "Google Internet Authority G2"]]]
+version:                 3
+subject_alt_name:        [["DNS", "*.google.com"], ["DNS", "*.android.com"], ["DNS", "*.appengine.google.com"], ["DNS", "*.cloud.google.com"], ["DNS", "*.gcp.gvt2.com"], ["DNS", "*.google-analytics.com"], ["DNS", "*.google.ca"], ["DNS", "*.google.cl"], ["DNS", "*.google.co.in"], ["DNS", "*.google.co.jp"], ["DNS", "*.google.co.uk"], ["DNS", "*.google.com.ar"], ["DNS", "*.google.com.au"], ["DNS", "*.google.com.br"], ["DNS", "*.google.com.co"], ["DNS", "*.google.com.mx"], ["DNS", "*.google.com.tr"], ["DNS", "*.google.com.vn"], ["DNS", "*.google.de"], ["DNS", "*.google.es"], ["DNS", "*.google.fr"], ["DNS", "*.google.hu"], ["DNS", "*.google.it"], ["DNS", "*.google.nl"], ["DNS", "*.google.pl"], ["DNS", "*.google.pt"], ["DNS", "*.googleadapis.com"], ["DNS", "*.googleapis.cn"], ["DNS", "*.googlecommerce.com"], ["DNS", "*.googlevideo.com"], ["DNS", "*.gstatic.cn"], ["DNS", "*.gstatic.com"], ["DNS", "*.gvt1.com"], ["DNS", "*.gvt2.com"], ["DNS", "*.metric.gstatic.com"], ["DNS", "*.urchin.com"], ["DNS", "*.url.google.com"], ["DNS", "*.youtube-nocookie.com"], ["DNS", "*.youtube.com"], ["DNS", "*.youtubeeducation.com"], ["DNS", "*.ytimg.com"], ["DNS", "android.clients.google.com"], ["DNS", "android.com"], ["DNS", "developer.android.google.cn"], ["DNS", "developers.android.google.cn"], ["DNS", "g.co"], ["DNS", "goo.gl"], ["DNS", "google-analytics.com"], ["DNS", "google.com"], ["DNS", "googlecommerce.com"], ["DNS", "source.android.google.cn"], ["DNS", "urchin.com"], ["DNS", "www.goo.gl"], ["DNS", "youtu.be"], ["DNS", "youtube.com"], ["DNS", "youtubeeducation.com"]]
+issuer:                  [[["countryName", "US"]], [["organizationName", "Google Inc"]], [["commonName", "Google Internet Authority G2"]]]
+not_after:               Jul 14 08:26:00 2017 GMT
+subject:                 [[["countryName", "US"]], [["stateOrProvinceName", "California"]], [["localityName", "Mountain View"]], [["organizationName", "Google Inc"]], [["commonName", "*.google.com"]]]
+crl_distribution_points: ["http://pki.google.com/GIAG2.crl"]
+serial_number:           53D7F33DC726A8AD
+ca_issuers:              ["http://pki.google.com/GIAG2.crt"]
+not_before:              Apr 21 09:13:03 2017 GMT
+OCSP:                    ["http://clients1.google.com/ocsp"]
 ```
 
 ##### WHOIS
