@@ -1,5 +1,6 @@
 from .exceptions import *
 from .operations import *
+from .utils import *
 import collections
 
 class Domnibus(DomnibusOperationMixin):
@@ -35,6 +36,7 @@ class Domnibus(DomnibusOperationMixin):
 
             if key not in self._data:
                 value, store = getattr(self, '{}{}'.format(self.FUNC_PREFIX, key))()
+                value = unify_key_formats(value)
                 if store:
                     self._data[key] = value
             else:
