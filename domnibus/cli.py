@@ -8,7 +8,17 @@ class DomnibusMeta(type):
         cls.list = cls.ls = ['{} <domain>'.format(am) for am in allowed_methods]
 
         for method in allowed_methods:
-            setattr(cls, method, (lambda method: lambda self, domain: Domnibus(domain)[method])(method))
+            def get_method(method):
+                def execute_method(domain, method):
+
+                    try:
+                        return Domnibus(domain)[method]
+                    except Exception as e:
+                        print('\033[91m' + str(e) + '\033[0m')
+
+                return lambda self, domain: execute_method(domain, method)
+
+            setattr(cls, method, get_method(method))
 
         return super(DomnibusMeta, cls).__init__(name, bases, attrs)
 
