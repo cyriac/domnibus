@@ -1,6 +1,6 @@
 # Domnibus
 
-Wrapper to collect all infomration possible around a domain
+Wrapper to collect all information possible around a domain
 
 ## Installation
 
